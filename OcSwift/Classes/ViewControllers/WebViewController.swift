@@ -10,20 +10,50 @@ import UIKit
 
 class WebViewController: BaseViewController,UIWebViewDelegate{
     @IBOutlet weak var webView: UIWebView!
-
+    private var _bridge:WebViewJavascriptBridge?;
+    
+    func rightBtnClick(btn:UIButton){
+        _bridge?.callHandler("testJavascriptHandler", data:["key":"value"],responseCallback: { (response) -> Void in
+            NSLog("sendMessage got response: \(response)");
+        });
+    }
+    
+    @IBAction func sendMsgBtnClick(sender: AnyObject) {
+        _bridge?.send("sendMessage to web", responseCallback: { (response) -> Void in
+            NSLog("sendMessage got response: \(response)");
+        })
+    }
+    
     //MARK: - Private Method
     func initData(){
-        
+
     }
     
     func initViews(){
+    
+        let rightBtn = self.createRightItemAction(Selector("rightBtnClick:"));
+        rightBtn.bounds = CGRectMake(0, 0, 60, 40);
+        rightBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal);
+        rightBtn.setTitle("callJS", forState: UIControlState.Normal);
         
         self.webView.delegate = self;
         let htmlPath = ITTPathForBundleResource("www/index.html");
         NSLog("htmlPath:\(htmlPath)");
         let htmlStr = String(NSString(fileInMainBundle:"www/index.html"));
-        NSLog("htmlStr:\(htmlStr)");
         webView.loadHTMLString(htmlStr, baseURL: NSURL(string: htmlPath));
+        if _bridge == nil{
+            WebViewJavascriptBridge.enableLogging();
+            _bridge = WebViewJavascriptBridge(forWebView: webView, webViewDelegate: self, handler: { (data, responseCallback) -> Void in
+                NSLog("ObjC received message from JS: \(data)");
+                responseCallback("Response for message from ObjC");
+            });
+        }
+        
+        _bridge?.registerHandler("testObjcCallback", handler: { (data, responseCallback) -> Void in
+            NSLog("\(data)");
+            responseCallback(["name":"liwenlong"]);
+        });
+        
     }
     
     //MARK: - Lifecycle Method
@@ -36,7 +66,7 @@ class WebViewController: BaseViewController,UIWebViewDelegate{
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         // Do any additional setup after loading the view.
         self.initData();
         self.initViews();

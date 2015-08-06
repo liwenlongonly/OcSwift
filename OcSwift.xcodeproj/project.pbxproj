@@ -116,6 +116,14 @@
 		DCA5E4C41B6F0BA60011CE6B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5E4C21B6F0BA60011CE6B /* WebViewController.swift */; };
 		DCA5E4C51B6F0BA60011CE6B /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA5E4C31B6F0BA60011CE6B /* WebViewController.xib */; };
 		DCA5E73C1B6F782A0011CE6B /* www in Resources */ = {isa = PBXBuildFile; fileRef = DCA5E73B1B6F782A0011CE6B /* www */; };
+		DCC07FD41B706C6A00170D02 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCC07FCE1B706C6A00170D02 /* WebViewJavascriptBridge.js.txt */; };
+		DCC07FD51B706C6A00170D02 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC07FCF1B706C6A00170D02 /* WebViewJavascriptBridge.m */; };
+		DCC07FD61B706C6A00170D02 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC07FD11B706C6A00170D02 /* WebViewJavascriptBridgeBase.m */; };
+		DCC07FD71B706C6A00170D02 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC07FD31B706C6A00170D02 /* WKWebViewJavascriptBridge.m */; };
+		DCC07FDA1B720E4900170D02 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07FD81B720E4900170D02 /* TwoViewController.swift */; };
+		DCC07FDB1B720E4900170D02 /* TwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC07FD91B720E4900170D02 /* TwoViewController.xib */; };
+		DCC07FDE1B720E5B00170D02 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC07FDC1B720E5B00170D02 /* ThreeViewController.swift */; };
+		DCC07FDF1B720E5B00170D02 /* ThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC07FDD1B720E5B00170D02 /* ThreeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,6 +345,17 @@
 		DCA5E4C21B6F0BA60011CE6B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DCA5E4C31B6F0BA60011CE6B /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		DCA5E73B1B6F782A0011CE6B /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		DCC07FCD1B706C6A00170D02 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		DCC07FCE1B706C6A00170D02 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
+		DCC07FCF1B706C6A00170D02 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		DCC07FD01B706C6A00170D02 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		DCC07FD11B706C6A00170D02 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		DCC07FD21B706C6A00170D02 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		DCC07FD31B706C6A00170D02 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		DCC07FD81B720E4900170D02 /* TwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
+		DCC07FD91B720E4900170D02 /* TwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoViewController.xib; sourceTree = "<group>"; };
+		DCC07FDC1B720E5B00170D02 /* ThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
+		DCC07FDD1B720E5B00170D02 /* ThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThreeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -649,6 +668,7 @@
 		DC93E7DB1B68CA46003189AE /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				DCC07FCC1B706C6A00170D02 /* WebViewJavascriptBridge */,
 				DC93E7DC1B68CA46003189AE /* AFNetworking */,
 				DC93E7F01B68CA46003189AE /* ITTNetworking */,
 				DC93E7F71B68CA46003189AE /* MBProgressHUD */,
@@ -800,6 +820,10 @@
 				DCA3BAD31B69D2DB001EEDDF /* NewsDetailsViewController.xib */,
 				DCA5E4C21B6F0BA60011CE6B /* WebViewController.swift */,
 				DCA5E4C31B6F0BA60011CE6B /* WebViewController.xib */,
+				DCC07FD81B720E4900170D02 /* TwoViewController.swift */,
+				DCC07FD91B720E4900170D02 /* TwoViewController.xib */,
+				DCC07FDC1B720E5B00170D02 /* ThreeViewController.swift */,
+				DCC07FDD1B720E5B00170D02 /* ThreeViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -809,6 +833,20 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DCC07FCC1B706C6A00170D02 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				DCC07FCE1B706C6A00170D02 /* WebViewJavascriptBridge.js.txt */,
+				DCC07FCD1B706C6A00170D02 /* WebViewJavascriptBridge.h */,
+				DCC07FCF1B706C6A00170D02 /* WebViewJavascriptBridge.m */,
+				DCC07FD01B706C6A00170D02 /* WebViewJavascriptBridgeBase.h */,
+				DCC07FD11B706C6A00170D02 /* WebViewJavascriptBridgeBase.m */,
+				DCC07FD21B706C6A00170D02 /* WKWebViewJavascriptBridge.h */,
+				DCC07FD31B706C6A00170D02 /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -894,6 +932,8 @@
 			files = (
 				DC93E8591B68CA46003189AE /* blueArrow@2x.png in Resources */,
 				DC93E8A01B68CC7A003189AE /* MainViewController.xib in Resources */,
+				DCC07FDB1B720E4900170D02 /* TwoViewController.xib in Resources */,
+				DCC07FDF1B720E5B00170D02 /* ThreeViewController.xib in Resources */,
 				DC93E7511B68C902003189AE /* LaunchScreen.xib in Resources */,
 				DCA5E4C51B6F0BA60011CE6B /* WebViewController.xib in Resources */,
 				DCA3BAD51B69D2DB001EEDDF /* NewsDetailsViewController.xib in Resources */,
@@ -906,6 +946,7 @@
 				DC93E8571B68CA46003189AE /* blackArrow@2x.png in Resources */,
 				DCA5E73C1B6F782A0011CE6B /* www in Resources */,
 				DC93E85D1B68CA46003189AE /* whiteArrow.png in Resources */,
+				DCC07FD41B706C6A00170D02 /* WebViewJavascriptBridge.js.txt in Resources */,
 				DC93E8671B68CA46003189AE /* ITTMaskActivityView.xib in Resources */,
 				DC93E85A1B68CA46003189AE /* grayArrow.png in Resources */,
 				DC93E74E1B68C902003189AE /* Images.xcassets in Resources */,
@@ -945,6 +986,7 @@
 				DC57C7CE1B68D2BE002FFCDB /* BaseViewController.m in Sources */,
 				DC93E83A1B68CA46003189AE /* NSArray+ITTAdditions.m in Sources */,
 				DC93E8631B68CA46003189AE /* ITTAFQueryStringPair.m in Sources */,
+				DCC07FD61B706C6A00170D02 /* WebViewJavascriptBridgeBase.m in Sources */,
 				DC93E8761B68CA46003189AE /* AFXMLRequestOperation.m in Sources */,
 				DC93E87B1B68CA46003189AE /* MBHUDHelper.m in Sources */,
 				DC93E8891B68CA46003189AE /* UIImage+MultiFormat.m in Sources */,
@@ -960,6 +1002,7 @@
 				DC93E8481B68CA46003189AE /* ITTCacheDao.m in Sources */,
 				DC93E7461B68C902003189AE /* AppDelegate.m in Sources */,
 				DC93E8681B68CA46003189AE /* ITTNetworkTrafficManager.m in Sources */,
+				DCC07FD71B706C6A00170D02 /* WKWebViewJavascriptBridge.m in Sources */,
 				DC93E86D1B68CA46003189AE /* ITTDataRequest.m in Sources */,
 				DC93E87E1B68CA46003189AE /* MKAnnotationView+WebCache.m in Sources */,
 				DC93E83B1B68CA46003189AE /* NSDate+ITTAdditions.m in Sources */,
@@ -999,6 +1042,8 @@
 				DC93E8701B68CA46003189AE /* AFHTTPRequestOperation.m in Sources */,
 				DC57C7D61B68DA11002FFCDB /* GetNewsRequest.swift in Sources */,
 				DC93E88D1B68CA46003189AE /* UIView+WebCacheOperation.m in Sources */,
+				DCC07FDE1B720E5B00170D02 /* ThreeViewController.swift in Sources */,
+				DCC07FDA1B720E4900170D02 /* TwoViewController.swift in Sources */,
 				DC93E8741B68CA46003189AE /* AFPropertyListRequestOperation.m in Sources */,
 				DC93E84A1B68CA46003189AE /* ITTFileCacheDao.m in Sources */,
 				DC93E8431B68CA46003189AE /* UIFont+ITTAdditions.m in Sources */,
@@ -1007,6 +1052,7 @@
 				DC93E8731B68CA46003189AE /* AFNetworkActivityIndicatorManager.m in Sources */,
 				DC93E8471B68CA46003189AE /* UIView+ITTAdditions.m in Sources */,
 				DC93E8451B68CA46003189AE /* UILabel+ITTAdditions.m in Sources */,
+				DCC07FD51B706C6A00170D02 /* WebViewJavascriptBridge.m in Sources */,
 				DC93E8801B68CA46003189AE /* SDImageCache.m in Sources */,
 				DCA5E4C11B6C6E5E0011CE6B /* UIColor+ITTAdditions.m in Sources */,
 				DC93E85F1B68CA46003189AE /* DemoModel.m in Sources */,

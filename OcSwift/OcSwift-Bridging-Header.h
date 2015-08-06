@@ -9,3 +9,4 @@
 #import "ITTPullTableView.h"
 #import "ITTDataEnvironment.h"
 #import "ITTGobalPaths.h"
+#import "WebViewJavascriptBridge.h"

@@ -9,7 +9,9 @@
 #import "BaseViewController.h"
 
 @interface BaseViewController ()
-
+{
+    NSInteger _currentIndex;
+}
 @end
 
 @implementation BaseViewController
@@ -100,6 +102,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -114,7 +117,35 @@
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
 #endif
-    
+    if (_isAnimationCell) {
+        
+        if (tableView.contentOffset.y<0) {
+            return;
+        }
+        NSInteger temp = _currentIndex-indexPath.row;
+        if (temp>0){
+            CATransform3D translation = CATransform3DMakeTranslation(0, -400, 0);
+            //rotation.m34 = 1.0/ -600;
+            //2. Define the initial state (Before the animation)
+            cell.alpha = 0;
+            cell.layer.transform = translation;
+            //cell.layer.anchorPoint = CGPointMake(.50, 0.5);
+        }else if(temp<0){
+            CATransform3D translation = CATransform3DMakeTranslation(0, 400, 0);
+            CATransform3D scaleAndTranslation =CATransform3DScale(translation,0.5,0.5,1.0);
+            //rotation.m34 = 1.0/ -600;
+            
+            //2. Define the initial state (Before the animation)
+            cell.alpha = 0;
+            cell.layer.transform = scaleAndTranslation;
+            //cell.layer.anchorPoint = CGPointMake(0.5, 0.5);
+        }
+        [UIView animateWithDuration:0.30f animations:^{
+            cell.layer.transform = CATransform3DIdentity;
+            cell.alpha = 1;
+        }];
+        _currentIndex = indexPath.row;
+    }
 }
 
 /*

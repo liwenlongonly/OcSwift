@@ -15,7 +15,6 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
     
     //MARK: - Private Method
     func initData(){
-        self.title = "首页";
         self.getNewsData();
     }
     
@@ -24,13 +23,22 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
         params["name"] = "liwenlong";
         GetNewsRequest.requestWithParameters(params, withIndicatorView: self.view) { [unowned self](request) -> Void in
             if request.isSuccess() {
-                
                 if !self.isLoadMore {
                     self.newsArray.removeAllObjects();
                 }
-                self.newsArray.addObjectsFromArray(request.handleredResult as! [AnyObject]);
+                var insertIndexPaths = Array<NSIndexPath>();
+                var index = self.newsArray.count;
+                for model in request.handleredResult as! [AnyObject] {
+                    self.newsArray .addObject(model);
+                    insertIndexPaths.append(NSIndexPath(forRow: index, inSection: 0));
+                    index += 1;
+                }
                 self.stopTablePull();
-                self.tableView.reloadData();
+                if self.isLoadMore {
+                   self.tableView.insertRowsAtIndexPaths(insertIndexPaths, withRowAnimation: UITableViewRowAnimation.None);
+                }else{
+                    self.tableView.reloadData();
+                }
             }
         }
     }
@@ -49,6 +57,7 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
     //MARK: - Lifecycle Method
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
+        self.title = "首页";
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -57,6 +66,7 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
     
     override func linkRef() {
         self.tableViewRef = self.tableView;
+        self.isAnimationCell = true;
     }
     
     override func viewDidLoad() {
@@ -121,10 +131,11 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
         
         //let newModel = self.newsArray[indexPath.row] as! NewsModel;
         let vc = WebViewController(nibName: "WebViewController", bundle: nil);
+        vc.hidesBottomBarWhenPushed = true;
         //vc.newModel = newModel;
         self.navigationController?.pushViewController(vc, animated: true);
-        
     }
+
     //MARK: - ITTPullTableViewDelegate
     func pullTableViewDidTriggerRefresh(pullTableView: ITTPullTableView!) {
         if !tableView.pullTableIsLoadingMore {

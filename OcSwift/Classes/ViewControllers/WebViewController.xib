@@ -17,17 +17,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5w-s4-Cis">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="552"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ut-rD-9Ny">
+                    <rect key="frame" x="0.0" y="552" width="600" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="fsZ-Fq-BBd"/>
+                    </constraints>
+                    <state key="normal" title="SendMessageToWeb"/>
+                    <connections>
+                        <action selector="sendMsgBtnClick:" destination="-1" eventType="touchUpInside" id="4CZ-AI-YKs"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="m5w-s4-Cis" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9yy-Ci-vkY"/>
                 <constraint firstItem="m5w-s4-Cis" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="E32-BT-jf6"/>
+                <constraint firstAttribute="bottom" secondItem="4ut-rD-9Ny" secondAttribute="bottom" id="V0u-PG-Dwm"/>
                 <constraint firstAttribute="trailing" secondItem="m5w-s4-Cis" secondAttribute="trailing" id="d0N-dz-4Zx"/>
+                <constraint firstItem="4ut-rD-9Ny" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="djc-sm-Lzm"/>
+                <constraint firstAttribute="bottom" secondItem="m5w-s4-Cis" secondAttribute="bottom" constant="48" id="dlW-h9-UxQ"/>
                 <constraint firstAttribute="bottom" secondItem="m5w-s4-Cis" secondAttribute="bottom" id="eHU-N4-lSE"/>
+                <constraint firstAttribute="trailing" secondItem="4ut-rD-9Ny" secondAttribute="trailing" id="wEw-yV-irD"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="eHU-N4-lSE"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="111" y="258"/>
         </view>
     </objects>

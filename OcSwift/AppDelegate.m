@@ -11,19 +11,46 @@
 #import "CommonUtils.h"
 
 @interface AppDelegate ()
-
+{
+    
+}
 @end
 
 @implementation AppDelegate
 
+#pragma mark - Private Method
 
+- (UIViewController*)createTabBarController
+{
+    MainViewController * mainVC = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
+    mainVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_home_img") tag:0];
+    mainVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    UINavigationController * mainNav = [[UINavigationController alloc]initWithRootViewController:mainVC];
+    
+    TwoViewController * twoVC = [[TwoViewController alloc]initWithNibName:@"TwoViewController" bundle:nil];
+    twoVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_coupon_img") tag:0];
+    twoVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    UINavigationController * twoNav = [[UINavigationController alloc]initWithRootViewController:twoVC];
+    
+    ThreeViewController * threeVC = [[ThreeViewController alloc]initWithNibName:@"ThreeViewController" bundle:nil];
+    threeVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_my_img") tag:0];
+    threeVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    UINavigationController * threeNav = [[UINavigationController alloc]initWithRootViewController:threeVC];
+    
+    _tabBarController = [[UITabBarController alloc]init];
+    _tabBarController.viewControllers = @[mainNav,twoNav,threeNav];
+    _tabBarController.selectedIndex = 0;
+    _tabBarController.tabBar.tintColor = [UIColor redColor];
+    _tabBarController.hidesBottomBarWhenPushed = YES;
+    return _tabBarController;
+}
+
+#pragma mark - Lifecycle Method
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    MainViewController * mainVC = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
-    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = [self createTabBarController];
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     

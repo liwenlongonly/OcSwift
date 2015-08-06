@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
-
+{
+    
+}
+@property(nonatomic,assign)BOOL isAnimationCell;
 @property(nonatomic,weak)UITableView*tableViewRef;
 /**
  *  在 NavigationBar上 创建 E洗车的 logo
