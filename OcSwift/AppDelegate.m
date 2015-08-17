@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "OcSwift-Swift.h"
 #import "CommonUtils.h"
+#import "PopViewController.h"
 
 @interface AppDelegate ()
 {
@@ -27,6 +28,11 @@
     mainVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     UINavigationController * mainNav = [[UINavigationController alloc]initWithRootViewController:mainVC];
     
+    PopViewController * popVC = [[PopViewController alloc]init];
+    popVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_coupon_img") tag:0];
+    popVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    UINavigationController * popNav = [[UINavigationController alloc]initWithRootViewController:popVC];
+    
     TwoViewController * twoVC = [[TwoViewController alloc]initWithNibName:@"TwoViewController" bundle:nil];
     twoVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_coupon_img") tag:0];
     twoVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
@@ -38,7 +44,7 @@
     UINavigationController * threeNav = [[UINavigationController alloc]initWithRootViewController:threeVC];
     
     _tabBarController = [[UITabBarController alloc]init];
-    _tabBarController.viewControllers = @[mainNav,twoNav,threeNav];
+    _tabBarController.viewControllers = @[mainNav,popNav,twoNav,threeNav];
     _tabBarController.selectedIndex = 0;
     _tabBarController.tabBar.tintColor = [UIColor redColor];
     _tabBarController.hidesBottomBarWhenPushed = YES;
@@ -49,7 +55,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.rootViewController = [self createTabBarController];
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoViewController" customModule="OcSwift" customModuleProvider="target">
             <connections>
+                <outlet property="laraCroftView" destination="Uxj-xb-E8x" id="QH1-5o-6V0"/>
+                <outlet property="tableView" destination="N0K-Fs-wRO" id="IOi-1E-RSC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +16,28 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="N0K-Fs-wRO">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="N0K-Fs-wRO" secondAttribute="bottom" id="2rb-aC-HCX"/>
+                <constraint firstAttribute="trailing" secondItem="N0K-Fs-wRO" secondAttribute="trailing" id="UHN-xS-pmV"/>
+                <constraint firstItem="N0K-Fs-wRO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VCP-g4-8BL"/>
+                <constraint firstItem="N0K-Fs-wRO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ijp-n1-SY7"/>
+            </constraints>
+            <point key="canvasLocation" x="237" y="330"/>
         </view>
+        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaraCroft" id="Uxj-xb-E8x">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="242.5" y="791.5"/>
+        </imageView>
     </objects>
+    <resources>
+        <image name="LaraCroft" width="320" height="299"/>
+    </resources>
 </document>

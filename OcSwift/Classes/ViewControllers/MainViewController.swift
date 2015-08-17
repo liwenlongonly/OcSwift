@@ -31,7 +31,7 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
                 for model in request.handleredResult as! [AnyObject] {
                     self.newsArray .addObject(model);
                     insertIndexPaths.append(NSIndexPath(forRow: index, inSection: 0));
-                    index += 1;
+                    index++;
                 }
                 self.stopTablePull();
                 if self.isLoadMore {
@@ -86,16 +86,6 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
     }
     
     // MARK: - UITableViewDataSource
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0;
-    }
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView();
-        view.backgroundColor = UIColor.clearColor();
-        return view;
-    }
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         let newModel = self.newsArray[indexPath.row] as! NewsModel;
