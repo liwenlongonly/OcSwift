@@ -13,3 +13,4 @@
 #import "UIView+ITTAdditions.h"
 #import "UIFont+ITTAdditions.h"
 #import "UIColor+ITTAdditions.h"
+#import "UITableView+Wave.h"

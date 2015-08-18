@@ -27,6 +27,7 @@ class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDel
         laraCroftView.frame = CGRectMake(
             0, -240, tableView.width, 240);
         tableView.addSubview(laraCroftView);
+        self.tableView.reloadDataAnimateWithWave(WaveAnimation.RightToLeftWaveAnimation);
     }
     
     override func linkRef() {
@@ -42,8 +43,9 @@ class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDel
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func viewDidLayoutSubviews(){
-         super.viewWillLayoutSubviews()
+         super.viewDidLayoutSubviews()
         print(tableView.width);
         laraCroftView.frame = CGRectMake(
             0, -240, tableView.width, 240);
@@ -67,7 +69,7 @@ class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDel
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return 5;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -78,6 +80,7 @@ class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDel
             cell = UITableViewCell(style: .Subtitle, reuseIdentifier: identifier);
             cell?.detailTextLabel?.numberOfLines = 0;
         }
+        cell?.textLabel?.text = String("第\(indexPath.row)行");
         return cell!
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC1B4C471B833A04003056EC /* UITableView+Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B4C461B833A04003056EC /* UITableView+Wave.m */; };
 		DC57C7CE1B68D2BE002FFCDB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57C7CD1B68D2BE002FFCDB /* BaseViewController.m */; };
 		DC57C7D31B68D825002FFCDB /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57C7D21B68D825002FFCDB /* NewsModel.swift */; };
 		DC57C7D61B68DA11002FFCDB /* GetNewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57C7D51B68DA11002FFCDB /* GetNewsRequest.swift */; };
@@ -157,6 +158,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC1B4C451B833A04003056EC /* UITableView+Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wave.h"; sourceTree = "<group>"; };
+		DC1B4C461B833A04003056EC /* UITableView+Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wave.m"; sourceTree = "<group>"; };
 		DC57C7CC1B68D2BE002FFCDB /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DC57C7CD1B68D2BE002FFCDB /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		DC57C7D21B68D825002FFCDB /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -544,6 +547,8 @@
 		DC93E7681B68CA46003189AE /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				DC1B4C451B833A04003056EC /* UITableView+Wave.h */,
+				DC1B4C461B833A04003056EC /* UITableView+Wave.m */,
 				DC93E7691B68CA46003189AE /* ITTAdditions.h */,
 				DC93E76A1B68CA46003189AE /* ITTCommonFunctions.h */,
 				DC93E76B1B68CA46003189AE /* ITTCommonFunctions.m */,
@@ -1200,6 +1205,7 @@
 				DC93E8931B68CA46003189AE /* UIUtil.m in Sources */,
 				DC93E8511B68CA46003189AE /* ITTBaseManager.m in Sources */,
 				DCC616671B744EF700AD2DA2 /* POPLayerExtras.mm in Sources */,
+				DC1B4C471B833A04003056EC /* UITableView+Wave.m in Sources */,
 				DCC616631B744EF700AD2DA2 /* POPCGUtils.mm in Sources */,
 				DC93E8701B68CA46003189AE /* AFHTTPRequestOperation.m in Sources */,
 				DC57C7D61B68DA11002FFCDB /* GetNewsRequest.swift in Sources */,

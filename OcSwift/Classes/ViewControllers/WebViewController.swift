@@ -11,7 +11,8 @@ import UIKit
 class WebViewController: BaseViewController,UIWebViewDelegate{
     @IBOutlet weak var webView: UIWebView!
     private var _bridge:WebViewJavascriptBridge?;
-    
+    var count:Float = 10.0;
+    //MARK: - Btn Event
     func rightBtnClick(btn:UIButton){
         _bridge?.callHandler("testJavascriptHandler", data:["key":"value"],responseCallback: { (response) -> Void in
             NSLog("sendMessage got response: \(response)");
@@ -22,6 +23,14 @@ class WebViewController: BaseViewController,UIWebViewDelegate{
         _bridge?.send("sendMessage to web", responseCallback: { (response) -> Void in
             NSLog("sendMessage got response: \(response)");
         })
+    }
+    
+    override func onGoBack(sender: AnyObject!) {
+        if self.webView.canGoBack{
+            self.webView.goBack();
+        }else{
+            self.navigationController?.popViewControllerAnimated(true);
+        }
     }
     
     //MARK: - Private Method

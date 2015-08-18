@@ -34,4 +34,8 @@
  * 这个方法需要子类Override，不能直接调用
  */
 - (void)linkRef;
+/**
+ *  方法功能：返回按钮的点击事件
+ */
+- (void)onGoBack:(id)sender;
 @end
