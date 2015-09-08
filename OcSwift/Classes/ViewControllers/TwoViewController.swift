@@ -11,7 +11,28 @@ import UIKit
 class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var laraCroftView: UIImageView!
+    private var navBackView:UIView?;
     //MARK: - Private Method
+    func getBackView(superView:UIView){
+        
+        if superView.isKindOfClass(NSClassFromString("_UINavigationBarBackground")!){
+            for view  in superView.subviews{
+                if view.isKindOfClass(NSClassFromString("UIImageView")!){
+                    view.removeFromSuperview();
+                }
+            }
+            navBackView = superView;
+            navBackView?.backgroundColor = UIColor.clearColor();
+            
+        }else if superView.isKindOfClass(NSClassFromString("_UIBackdropView")!){
+            superView.hidden = true;
+        }
+        for view in superView.subviews{
+            self.getBackView(view);
+        }
+        
+    }
+    
     func initData()
     {
         laraCroftView.contentMode = UIViewContentMode.ScaleAspectFit;
@@ -28,6 +49,7 @@ class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDel
             0, -240, tableView.width, 240);
         tableView.addSubview(laraCroftView);
         self.tableView.reloadDataAnimateWithWave(WaveAnimation.RightToLeftWaveAnimation);
+        self.getBackView((self.navigationController?.navigationBar)!);
     }
     
     override func linkRef() {
@@ -69,7 +91,7 @@ class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDel
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return 15;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -93,6 +115,11 @@ class TwoViewController: BaseViewController,UITableViewDataSource,UITableViewDel
             f.size.height =  -yOffset;
             self.laraCroftView.frame = f;
         }
+        var alaph = (yOffset+240-64) / 32.0;
+        alaph = min(alaph, 1);
+        alaph = max(alaph, 0);
+        navBackView?.backgroundColor =
+            UIColor.blueColor().colorWithAlphaComponent(alaph);
     }
     /*
     // MARK: - Navigation

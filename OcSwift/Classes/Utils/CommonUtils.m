@@ -179,7 +179,6 @@
 +(void)copyBundleFile:(NSString *)fName toDocumentFile:(NSString *)tName;
 {
     NSString *toFilePath = ITTPathForDocumentsResource(tName);
-    
     ITTDPRINT(@" Copy File to %@ ",toFilePath);
     if ([[NSFileManager defaultManager] fileExistsAtPath:toFilePath]) {
         ITTDPRINT(@"文件已经存在了");

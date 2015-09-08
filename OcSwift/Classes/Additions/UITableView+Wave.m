@@ -33,7 +33,6 @@
         cell.hidden = YES;
         NSArray *array = @[path,[NSNumber numberWithInt:animation]];
         [self performSelector:@selector(animationStart:) withObject:array afterDelay:.1*(i+1)];
-        
     }
 }
 

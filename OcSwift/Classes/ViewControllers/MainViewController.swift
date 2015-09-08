@@ -118,11 +118,8 @@ class MainViewController: BaseViewController,UITableViewDataSource,UITableViewDe
     //MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated:true);
-        
-        //let newModel = self.newsArray[indexPath.row] as! NewsModel;
         let vc = WebViewController(nibName: "WebViewController", bundle: nil);
         vc.hidesBottomBarWhenPushed = true;
-        //vc.newModel = newModel;
         self.navigationController?.pushViewController(vc, animated: true);
     }
 

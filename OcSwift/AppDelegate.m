@@ -24,22 +24,22 @@
 - (UIViewController*)createTabBarController
 {
     MainViewController * mainVC = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
-    mainVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_home_img") tag:0];
+    mainVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil image:ImageNamed(@"tabBar_home_img") tag:0];
     mainVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     UINavigationController * mainNav = [[UINavigationController alloc]initWithRootViewController:mainVC];
     
     PopViewController * popVC = [[PopViewController alloc]init];
-    popVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_coupon_img") tag:0];
+    popVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil image:ImageNamed(@"tabBar_coupon_img") tag:0];
     popVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     UINavigationController * popNav = [[UINavigationController alloc]initWithRootViewController:popVC];
     
     TwoViewController * twoVC = [[TwoViewController alloc]initWithNibName:@"TwoViewController" bundle:nil];
-    twoVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_coupon_img") tag:0];
+    twoVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil image:ImageNamed(@"tabBar_coupon_img") tag:0];
     twoVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     UINavigationController * twoNav = [[UINavigationController alloc]initWithRootViewController:twoVC];
     
     ThreeViewController * threeVC = [[ThreeViewController alloc]initWithNibName:@"ThreeViewController" bundle:nil];
-    threeVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:ImageNamed(@"tabBar_my_img") tag:0];
+    threeVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil image:ImageNamed(@"tabBar_my_img") tag:0];
     threeVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     UINavigationController * threeNav = [[UINavigationController alloc]initWithRootViewController:threeVC];
     
@@ -56,7 +56,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [self createTabBarController];
-    self.window.backgroundColor = [UIColor blackColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

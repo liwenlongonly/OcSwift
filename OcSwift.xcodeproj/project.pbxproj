@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DC1B4C471B833A04003056EC /* UITableView+Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B4C461B833A04003056EC /* UITableView+Wave.m */; };
+		DC319E4F1B87562E0008CE76 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC319E4C1B87562E0008CE76 /* CustomView.m */; };
+		DC319E501B87562E0008CE76 /* QCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = DC319E4E1B87562E0008CE76 /* QCMethod.m */; };
 		DC57C7CE1B68D2BE002FFCDB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57C7CD1B68D2BE002FFCDB /* BaseViewController.m */; };
 		DC57C7D31B68D825002FFCDB /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57C7D21B68D825002FFCDB /* NewsModel.swift */; };
 		DC57C7D61B68DA11002FFCDB /* GetNewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57C7D51B68DA11002FFCDB /* GetNewsRequest.swift */; };
@@ -145,6 +147,7 @@
 		DCC6166A1B744EF700AD2DA2 /* POPSpringAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = DCC616511B744EF700AD2DA2 /* POPSpringAnimation.mm */; };
 		DCC6166B1B744EF700AD2DA2 /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = DCC616551B744EF700AD2DA2 /* POPVector.mm */; };
 		DCC6166C1B744EF700AD2DA2 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCC616581B744EF700AD2DA2 /* TransformationMatrix.cpp */; };
+		DCEFBB181B945601008CD42E /* CurveBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEFBB171B945601008CD42E /* CurveBorderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +163,10 @@
 /* Begin PBXFileReference section */
 		DC1B4C451B833A04003056EC /* UITableView+Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wave.h"; sourceTree = "<group>"; };
 		DC1B4C461B833A04003056EC /* UITableView+Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wave.m"; sourceTree = "<group>"; };
+		DC319E4B1B87562E0008CE76 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		DC319E4C1B87562E0008CE76 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		DC319E4D1B87562E0008CE76 /* QCMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMethod.h; sourceTree = "<group>"; };
+		DC319E4E1B87562E0008CE76 /* QCMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMethod.m; sourceTree = "<group>"; };
 		DC57C7CC1B68D2BE002FFCDB /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DC57C7CD1B68D2BE002FFCDB /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		DC57C7D21B68D825002FFCDB /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -433,6 +440,8 @@
 		DCC616581B744EF700AD2DA2 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
 		DCC616591B744EF700AD2DA2 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
 		DCC6165A1B744EF700AD2DA2 /* UnitBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitBezier.h; sourceTree = "<group>"; };
+		DCEFBB161B945601008CD42E /* CurveBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveBorderView.h; sourceTree = "<group>"; };
+		DCEFBB171B945601008CD42E /* CurveBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveBorderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +462,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC319E4A1B87562E0008CE76 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				DC319E4B1B87562E0008CE76 /* CustomView.h */,
+				DC319E4C1B87562E0008CE76 /* CustomView.m */,
+				DC319E4D1B87562E0008CE76 /* QCMethod.h */,
+				DC319E4E1B87562E0008CE76 /* QCMethod.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		DC57C7D41B68D9DB002FFCDB /* NewsRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +608,7 @@
 		DC93E7891B68CA46003189AE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DC319E4A1B87562E0008CE76 /* Animation */,
 				DCA3BAD11B69CFE7001EEDDF /* View */,
 				DC93E78A1B68CA46003189AE /* CONSTS.h */,
 				DC93E78B1B68CA46003189AE /* DataCache */,
@@ -914,6 +935,8 @@
 		DCA3BAD11B69CFE7001EEDDF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DCEFBB161B945601008CD42E /* CurveBorderView.h */,
+				DCEFBB171B945601008CD42E /* CurveBorderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1124,6 +1147,7 @@
 				DC93E8551B68CA46003189AE /* ITTRefreshTableHeaderView.m in Sources */,
 				DC93E84E1B68CA46003189AE /* ITTImageView.m in Sources */,
 				DC93E8531B68CA46003189AE /* ITTMessageInterceptor.m in Sources */,
+				DCEFBB181B945601008CD42E /* CurveBorderView.m in Sources */,
 				DC93E87F1B68CA46003189AE /* NSData+ImageContentType.m in Sources */,
 				DC93E8691B68CA46003189AE /* ITTRequestDataHandler.m in Sources */,
 				DC93E8911B68CA46003189AE /* RandomUtil.m in Sources */,
@@ -1143,6 +1167,7 @@
 				DCC07FD61B706C6A00170D02 /* WebViewJavascriptBridgeBase.m in Sources */,
 				DCC616651B744EF700AD2DA2 /* POPDecayAnimation.mm in Sources */,
 				DC93E8761B68CA46003189AE /* AFXMLRequestOperation.m in Sources */,
+				DC319E501B87562E0008CE76 /* QCMethod.m in Sources */,
 				DC93E87B1B68CA46003189AE /* MBHUDHelper.m in Sources */,
 				DC93E8891B68CA46003189AE /* UIImage+MultiFormat.m in Sources */,
 				DC93E88F1B68CA46003189AE /* CommonUtils.m in Sources */,
@@ -1158,6 +1183,7 @@
 				DC93E7461B68C902003189AE /* AppDelegate.m in Sources */,
 				DC93E8681B68CA46003189AE /* ITTNetworkTrafficManager.m in Sources */,
 				DCC07FD71B706C6A00170D02 /* WKWebViewJavascriptBridge.m in Sources */,
+				DC319E4F1B87562E0008CE76 /* CustomView.m in Sources */,
 				DCC6165E1B744EF700AD2DA2 /* POPAnimationExtras.mm in Sources */,
 				DCC6165B1B744EF700AD2DA2 /* POPAnimatableProperty.mm in Sources */,
 				DC93E86D1B68CA46003189AE /* ITTDataRequest.m in Sources */,
