@@ -135,4 +135,9 @@ CGRect ITTScreenBounds();
  */
 - (CGPoint)offsetFromView:(UIView*)otherView;
 
+/**
+ *  方法功能：获取view所在的UIViewController
+ */
+- (UIViewController*)viewController;
+
 @end

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThreeViewController: BaseViewController,UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate{
+class ThreeViewController: BaseViewController,UIAlertViewDelegate{
     //MARK: - Private Method
     func initViews()
     {

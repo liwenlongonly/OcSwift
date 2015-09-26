@@ -16,6 +16,8 @@
 		DC57C7D91B68DF45002FFCDB /* NewsJson.json in Resources */ = {isa = PBXBuildFile; fileRef = DC57C7D81B68DF45002FFCDB /* NewsJson.json */; };
 		DC679B2A1B7320C400DB9546 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC679B281B7320C400DB9546 /* PopViewController.m */; };
 		DC679B2B1B7320C400DB9546 /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC679B291B7320C400DB9546 /* PopViewController.xib */; };
+		DC6A05E51BAFFA9400672F54 /* ITTDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6A05E21BAFFA9400672F54 /* ITTDataRequest.m */; };
+		DC6A05E61BAFFA9400672F54 /* TestDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6A05E41BAFFA9400672F54 /* TestDataRequest.m */; };
 		DC93E7431B68C902003189AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7421B68C902003189AE /* main.m */; };
 		DC93E7461B68C902003189AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7451B68C902003189AE /* AppDelegate.m */; };
 		DC93E74E1B68C902003189AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC93E74D1B68C902003189AE /* Images.xcassets */; };
@@ -72,8 +74,6 @@
 		DC93E86A1B68CA46003189AE /* ITTRequestJsonDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7D11B68CA46003189AE /* ITTRequestJsonDataHandler.m */; };
 		DC93E86B1B68CA46003189AE /* ITTRequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7D31B68CA46003189AE /* ITTRequestResult.m */; };
 		DC93E86C1B68CA46003189AE /* DemoDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7D51B68CA46003189AE /* DemoDataRequest.m */; };
-		DC93E86D1B68CA46003189AE /* ITTDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7D81B68CA46003189AE /* ITTDataRequest.m */; };
-		DC93E86E1B68CA46003189AE /* TestDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7DA1B68CA46003189AE /* TestDataRequest.m */; };
 		DC93E86F1B68CA46003189AE /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7DE1B68CA46003189AE /* AFHTTPClient.m */; };
 		DC93E8701B68CA46003189AE /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7E01B68CA46003189AE /* AFHTTPRequestOperation.m */; };
 		DC93E8711B68CA46003189AE /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93E7E21B68CA46003189AE /* AFImageRequestOperation.m */; };
@@ -175,6 +175,10 @@
 		DC679B271B7320C400DB9546 /* PopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
 		DC679B281B7320C400DB9546 /* PopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
 		DC679B291B7320C400DB9546 /* PopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
+		DC6A05E11BAFFA9400672F54 /* ITTDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTDataRequest.h; sourceTree = "<group>"; };
+		DC6A05E21BAFFA9400672F54 /* ITTDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTDataRequest.m; sourceTree = "<group>"; };
+		DC6A05E31BAFFA9400672F54 /* TestDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataRequest.h; sourceTree = "<group>"; };
+		DC6A05E41BAFFA9400672F54 /* TestDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataRequest.m; sourceTree = "<group>"; };
 		DC93E73D1B68C902003189AE /* OcSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OcSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC93E7411B68C902003189AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC93E7421B68C902003189AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -283,10 +287,6 @@
 		DC93E7D31B68CA46003189AE /* ITTRequestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTRequestResult.m; sourceTree = "<group>"; };
 		DC93E7D41B68CA46003189AE /* DemoDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoDataRequest.h; sourceTree = "<group>"; };
 		DC93E7D51B68CA46003189AE /* DemoDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoDataRequest.m; sourceTree = "<group>"; };
-		DC93E7D71B68CA46003189AE /* ITTDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTDataRequest.h; sourceTree = "<group>"; };
-		DC93E7D81B68CA46003189AE /* ITTDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTDataRequest.m; sourceTree = "<group>"; };
-		DC93E7D91B68CA46003189AE /* TestDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataRequest.h; sourceTree = "<group>"; };
-		DC93E7DA1B68CA46003189AE /* TestDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataRequest.m; sourceTree = "<group>"; };
 		DC93E7DD1B68CA46003189AE /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		DC93E7DE1B68CA46003189AE /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		DC93E7DF1B68CA46003189AE /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -710,14 +710,15 @@
 		DC93E7BD1B68CA46003189AE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DC93E7D41B68CA46003189AE /* DemoDataRequest.h */,
+				DC93E7D51B68CA46003189AE /* DemoDataRequest.m */,
+				DC6A05E11BAFFA9400672F54 /* ITTDataRequest.h */,
+				DC6A05E21BAFFA9400672F54 /* ITTDataRequest.m */,
+				DC6A05E31BAFFA9400672F54 /* TestDataRequest.h */,
+				DC6A05E41BAFFA9400672F54 /* TestDataRequest.m */,
 				DC57C7D41B68D9DB002FFCDB /* NewsRequest */,
 				DC93E7BE1B68CA46003189AE /* AFNetworking */,
 				DC93E7C31B68CA46003189AE /* Common */,
-				DC93E7D41B68CA46003189AE /* DemoDataRequest.h */,
-				DC93E7D51B68CA46003189AE /* DemoDataRequest.m */,
-				DC93E7D61B68CA46003189AE /* ITTNetworking */,
-				DC93E7D91B68CA46003189AE /* TestDataRequest.h */,
-				DC93E7DA1B68CA46003189AE /* TestDataRequest.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -754,15 +755,6 @@
 				DC93E7D31B68CA46003189AE /* ITTRequestResult.m */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		DC93E7D61B68CA46003189AE /* ITTNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				DC93E7D71B68CA46003189AE /* ITTDataRequest.h */,
-				DC93E7D81B68CA46003189AE /* ITTDataRequest.m */,
-			);
-			path = ITTNetworking;
 			sourceTree = "<group>";
 		};
 		DC93E7DB1B68CA46003189AE /* Support */ = {
@@ -1147,6 +1139,7 @@
 				DC93E8551B68CA46003189AE /* ITTRefreshTableHeaderView.m in Sources */,
 				DC93E84E1B68CA46003189AE /* ITTImageView.m in Sources */,
 				DC93E8531B68CA46003189AE /* ITTMessageInterceptor.m in Sources */,
+				DC6A05E61BAFFA9400672F54 /* TestDataRequest.m in Sources */,
 				DCEFBB181B945601008CD42E /* CurveBorderView.m in Sources */,
 				DC93E87F1B68CA46003189AE /* NSData+ImageContentType.m in Sources */,
 				DC93E8691B68CA46003189AE /* ITTRequestDataHandler.m in Sources */,
@@ -1176,7 +1169,6 @@
 				DC93E8881B68CA46003189AE /* UIImage+GIF.m in Sources */,
 				DC93E89F1B68CC7A003189AE /* MainViewController.swift in Sources */,
 				DC93E8821B68CA46003189AE /* SDWebImageDecoder.m in Sources */,
-				DC93E86E1B68CA46003189AE /* TestDataRequest.m in Sources */,
 				DC93E8811B68CA46003189AE /* SDWebImageCompat.m in Sources */,
 				DC93E8781B68CA46003189AE /* ITTHTTPRequest.m in Sources */,
 				DC93E8481B68CA46003189AE /* ITTCacheDao.m in Sources */,
@@ -1186,7 +1178,6 @@
 				DC319E4F1B87562E0008CE76 /* CustomView.m in Sources */,
 				DCC6165E1B744EF700AD2DA2 /* POPAnimationExtras.mm in Sources */,
 				DCC6165B1B744EF700AD2DA2 /* POPAnimatableProperty.mm in Sources */,
-				DC93E86D1B68CA46003189AE /* ITTDataRequest.m in Sources */,
 				DCC6166B1B744EF700AD2DA2 /* POPVector.mm in Sources */,
 				DC93E87E1B68CA46003189AE /* MKAnnotationView+WebCache.m in Sources */,
 				DC93E83B1B68CA46003189AE /* NSDate+ITTAdditions.m in Sources */,
@@ -1227,6 +1218,7 @@
 				DC93E8501B68CA46003189AE /* ITTGobalPaths.m in Sources */,
 				DC93E8901B68CA46003189AE /* LocaleUtils.m in Sources */,
 				DC93E8711B68CA46003189AE /* AFImageRequestOperation.m in Sources */,
+				DC6A05E51BAFFA9400672F54 /* ITTDataRequest.m in Sources */,
 				DC93E8831B68CA46003189AE /* SDWebImageDownloader.m in Sources */,
 				DC93E8931B68CA46003189AE /* UIUtil.m in Sources */,
 				DC93E8511B68CA46003189AE /* ITTBaseManager.m in Sources */,
